@@ -13,23 +13,10 @@ import java.util.ArrayList;
  * @author eu
  */
 public class RevendaComArray {
-    private ArrayList<Produto> produto;
+    private Produto[] produto;
 
-    public ArrayList<Produto> getProduto() {
-        return produto;
-    }
-
-    public void setProduto(ArrayList<Produto> produto) {
-        this.produto = produto;
-    }
-
-    public int getIndice() {
-        return indice;
-    }
-
-    public void setIndice(int indice) {
-        this.indice = indice;
-    }
+    
+    
     private int indice;
     
     /*private int codigoProduto;
@@ -43,11 +30,23 @@ public class RevendaComArray {
     */
 
     public RevendaComArray(int indice ) {
-        this.produto = new ArrayList (indice);
+        this.produto = new Produto[indice];
         
     }
     
     public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
-        produto.set(indice, new Produto(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
+        
+        this.produto[indice] = new Produto(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
+        
+        //(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
+    }
+    
+    
+    public void comprar(int code, Produto qtdProduto){ //inserir mais quantidade comprada
+        for(int i = 0; i<indice; i++){
+            if(code = produto[i].getCodigoProduto(){
+                produto[i].setQtdEstoque(produto[i].getQtdEstoque + qtdProduto);
+            }
+        }
     }
 }
