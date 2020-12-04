@@ -17,7 +17,25 @@ import java.util.ArrayList;
 public class RevendaComArray {
     private ArrayList<Produto> produto;
 
+<<<<<<< HEAD
     
+=======
+    public ArrayList<Produto> getProduto() {
+        return produto;
+    }
+
+    public void setProduto(ArrayList<Produto> produto) {
+        this.produto = produto;
+    }
+
+    public int getIndice() {
+        return indice;
+    }
+
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+>>>>>>> 0ac34fd1abef656daea228b58aa9993ad2d1be3a
     private int indice;
 
     /*private int codigoProduto;
@@ -31,6 +49,7 @@ public class RevendaComArray {
     */
 
     public RevendaComArray(int indice ) {
+<<<<<<< HEAD
         
         this.produto = new ArrayList (indice);
         for(int i = 0;i<indice; i++){
@@ -61,6 +80,32 @@ public class RevendaComArray {
     
     
 //}
+=======
+        this.produto = new ArrayList (indice);
+
+    }
+
+    public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
+        produto.set(indice, new Produto(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
+    }
+    
+    public void comprar(int code, int qtdcomprada){
+        int cont = 0;
+        for(int i = 0; i<this.indice; i++){
+        if(this.produto.get(i).getCodigoProduto().equals(code)){
+            this.produto.get(i).compra(qtdcomprada);
+        }if (this.produto.get(i).getCodigoProduto() != code){
+            cont++;
+        }
+            }
+        if(cont == this.indice){
+            System.out.println("Esse produto nao existe!");
+        }
+    }
+    
+    
+}
+>>>>>>> 0ac34fd1abef656daea228b58aa9993ad2d1be3a
     public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
         
         this.produto.set(indice, codigoProduto);
