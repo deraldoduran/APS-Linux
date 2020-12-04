@@ -8,6 +8,8 @@
  *
  * @author eu
  */
+package analiseprojetossistemas;
+
 public class Produto {
     
     private int codigoProduto;
@@ -16,6 +18,7 @@ public class Produto {
     private double custoArmazenagemouBeneficiamento;
     private double margemLucro;
     private int qtdEstoque;
+    
     
 
     public int getCodigoProduto() {
@@ -53,6 +56,13 @@ public class Produto {
 
     double calculaPrecodeVenda (){
         return valorCompra + custoArmazenagemouBeneficiamento + margemLucro *(valorCompra + custoArmazenagemouBeneficiamento);
+    }
+    
+    /**
+     *
+     */
+    public Produto(){
+        
     }
 
     public Produto(int codigoProduto, String descricaoProduto, double valorCompra, double custoArmazenagemouBeneficiamento, double margemLucro) {
@@ -120,4 +130,6 @@ public class Produto {
     public void setMargemLucro(double margemLucro) {
         this.margemLucro = margemLucro;
     }
+    
+    
 }
