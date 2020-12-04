@@ -1,5 +1,7 @@
 
+
 import java.util.ArrayList;
+
 
 
 /*
@@ -10,15 +12,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author eu
+* @author eu
  */
 public class RevendaComArray {
-    private Produto[] produto;
+    private ArrayList<Produto> produto;
 
     
-    
     private int indice;
-    
+
     /*private int codigoProduto;
     private String descricaoProduto;
     private double valorCompra;
@@ -30,23 +31,57 @@ public class RevendaComArray {
     */
 
     public RevendaComArray(int indice ) {
-        this.produto = new Produto[indice];
         
+        this.produto = new ArrayList (indice);
+        for(int i = 0;i<indice; i++){
+            this.produto.add(new Produto());
+
+    }
     }
     
+    
+
+   // public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
+       // produto.set(indice, new Produto(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
+   // }
+    
+   // public void comprar(int code, int qtdcomprada){
+       // int cont = 0;
+      //  for(int i = 0; i<this.indice; i++){
+      //  if(this.produto.get(i).getCodigoProduto().equals(code)){
+         //   this.produto.get(i).compra(qtdcomprada);
+       // }if (this.produto.get(i).getCodigoProduto() != code){
+       //     cont++;
+       // }
+        //    }
+       // if(cont == this.indice){
+         //   System.out.println("Esse produto nao existe!");
+      //  }
+   // }
+    
+    
+//}
     public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
         
-        this.produto[indice] = new Produto(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
+        this.produto.set(indice, codigoProduto);
         
-        //(codigoProduto, descricaoProduto, valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
+//(codigoProduto, descricaoProduto, valor(Compra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
+        
+        //(codigoProduto, descricaoProdu valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
     }
     
     
-    public void comprar(int code, Produto qtdProduto){ //inserir mais quantidade comprada
+    public void comprar(int code, int qtd){ //inserir mais quantidade comprada
+            int cont=0;
         for(int i = 0; i<indice; i++){
-            if(code = produto[i].getCodigoProduto(){
-                produto[i].setQtdEstoque(produto[i].getQtdEstoque + qtdProduto);
+            if(code == produto.get(i).getCodigoProduto()){
+                produto.get(i).compra(qtd);
+            }if(this.produto.get(i).getCodigoProduto()!=code){
+                cont++;
             }
+        }
+        if(cont == this.indice){
+            System.out.println("Produto Inexistente, tente outro código!");
         }
     }
 }
