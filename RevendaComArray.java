@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 public class RevendaComArray {
     private ArrayList<Produto> produto;
+
+    
     private int indice;
 
     /*private int codigoProduto;
@@ -62,15 +64,9 @@ public class RevendaComArray {
     public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
         
         this.produto.set(indice, codigoProduto);
-<<<<<<< HEAD
         
 //(codigoProduto, descricaoProduto, valor(Compra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
         
-=======
-        
-//(codigoProduto, descricaoProduto, valor(Compra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
-        
->>>>>>> acf358ebe8e52208891171cf26965396fa0ea0a4
         //(codigoProduto, descricaoProdu valorCompra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque));
     }
     
@@ -86,10 +82,6 @@ public class RevendaComArray {
         }
         if(cont == this.indice){
             System.out.println("Produto Inexistente, tente outro código!");
+        }
     }
 }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> acf358ebe8e52208891171cf26965396fa0ea0a4
