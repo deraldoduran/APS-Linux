@@ -65,6 +65,10 @@ public class RevendaComArray {
         
         this.produto.set(indice, codigoProduto);
         this.produto.set(indice, descricaoProduto);
+        this.produto.set(indice, valorCompra);
+        this.produto.set(indice, custoArmazenagemouBeneficiamento);
+        this.produto.set(indice, margemLucro);
+        this.produto.set(indice, qtdEstoque);
         
 //(codigoProduto, descricaoProduto, valor(Compra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
         
