@@ -46,12 +46,17 @@ public class Produto {
     }
     
     
-    void compra(int qtd){
+    public void compra(int qtd){
         qtdEstoque = qtdEstoque + qtd;
     }
     
-    void venda(int qtd){
-        qtdEstoque = qtdEstoque - qtd;
+    public void venda(int qtd){
+        if (qtdEstoque>0){
+             qtdEstoque = qtdEstoque - qtd;
+        }else{
+            System.out.println("nao tem estoque, zerado!");
+        }
+       
     }
 
     double calculaPrecodeVenda (){

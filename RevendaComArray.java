@@ -64,6 +64,7 @@ public class RevendaComArray {
     public void inserirProduto(int indice, Produto codigoProduto, Produto descricaoProduto, Produto valorCompra, Produto custoArmazenagemouBeneficiamento, Produto margemLucro, Produto  qtdEstoque){
         
         this.produto.set(indice, codigoProduto);
+        this.produto.set(indice, descricaoProduto);
         
 //(codigoProduto, descricaoProduto, valor(Compra, custoArmazenagemouBeneficiamento, margemLucro, qtdEstoque);
         
@@ -84,4 +85,41 @@ public class RevendaComArray {
             System.out.println("Produto Inexistente, tente outro código!");
         }
     }
+
+    public void vender(int code, int qtd){ 
+        int cont=0;
+    for(int i = 0; i<indice; i++){
+        if(code == produto.get(i).getCodigoProduto()){
+            produto.get(i).venda(qtd);
+        }if(this.produto.get(i).getCodigoProduto()!=code){
+            cont++;
+        }
+    }
+    if(cont == this.indice){
+        System.out.println("Produto Inexistente, tente outro código!");
+    }
+}
+
+public void consultaPrecoVenda(int code){ 
+    int cont=0;
+for(int i = 0; i<indice; i++){
+    if(code == produto.get(i).getCodigoProduto()){
+        System.out.println (produto.get(i).calculaPrecodeVenda ());
+    }if(this.produto.get(i).getCodigoProduto()!=code){
+        cont++;
+    }
+}
+if(cont == this.indice){
+    System.out.println("Produto Inexistente, tente outro código!");
+}
+}
+
+public void listarPrecos (){
+    for(int i = 0; i<this.indice; i++){
+        System.out.println(this.produto.get(i).getCodigoProduto());
+        System.out.println(this.produto.get(i).getDescricaoProduto());
+        System.out.println(this.produto.get(i).getValorCompra());
+    }
+}
+
 }
